@@ -1,0 +1,25 @@
+Algorithm 1 EEG Data Collection and Storage
+Require: None
+Ensure: data eeg.csv file with EEG data
+1: Initialize arrays for EEG data
+2: if data eeg.csv does not exist then
+3: Create it
+4: end if
+5: Load data eeg.csv into DataFrame ‘dataset’
+6: Connect to MindWave headset via Telnet
+7: Set data transmission format to JSON and enable raw output
+8: Start timer
+9: while elapsed time < 180 seconds do
+10: Read data from MindWave
+11: Parse the JSON data
+12: Store values in respective arrays and dictionaries
+13: Print the parsed values
+14: if output file specified then
+15: Write parsed values to file
+16: end if
+17: end while
+18: Prompt user for personal details and blink information
+19: Create a new row in the dataset with the recorded data
+20: Save the dataset to data eeg.csv
+21: Close Telnet connection
+22: Convert string lists in dataset to actual lists
